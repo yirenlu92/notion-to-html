@@ -200,8 +200,8 @@ exports.index = async (req, res) => {
    try {
       const pageId = req.params.pageId.replaceAll("-", "");
       const { body } = req;
-      const { token } = body;
       const params = req.query;
+      const { token } = params;
       const { remoteAddress } = req.socket;
 
       // Log some info about the client
